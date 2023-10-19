@@ -9,14 +9,14 @@ from selenium import webdriver
 pd.options.mode.chained_assignment = None
 from selenium.webdriver.common.by import By
 
-driver = webdriver.Chrome()
+driver = webdriver.Firefox()
 print(driver)
 
-def extrac_content(url):
+def extract_content(url):
     # Function to extract content from page.
     driver.get(url)
     page_content = driver.page_source
-    soup = BeautifulSoup(page_content, 'html.parser')
+    soup = BeautifulSoup(page_content, 'html.parser')a
     return soup
 
 def click_url(driver):
@@ -24,7 +24,11 @@ def click_url(driver):
     driver.find_element(By.XPATH, '//*[@id="navpills-sizing/a[3]').click()
     html_content = driver.page_source
     soup         = BeautifulSoup(html_content, 'html.parser')
-    return
+    return soup
 
 def category_link(soup):
-    
+    # Function to get the urls of sub categories under Audio/Video
+    category_link = []
+    for div in soup.find_all('div', attrs = {"class": "col=-xs-12 col-lg-6 con-cl-3"}):
+        
+        
