@@ -1,0 +1,6 @@
+{
+    "root"     : "https://www.costco.co.kr/",
+    "whats_new": "/html/body/main/sip-header/header/div[2]/div[2]/nav/div/div[1]/div/div[2]/ul[7]/li/a",
+    "category" : {
+        "digital"  : "https://www.costco.co.kr/ElectronicsComputers/c/cos_1"}
+}

@@ -1,10 +1,10 @@
 import requests
 from bs4 import BeautifulSoup
 
-# url = "https://www.costco.co.kr/c/whatsnew?itm_source=homepage&itm_medium=blueNav&itm_campaign=whatsnew&itm_term=whatsnew&itm_content=InternalCATwhatsnew"
+url = "https://www.costco.co.kr/c/whatsnew?itm_source=homepage&itm_medium=blueNav&itm_campaign=whatsnew&itm_term=whatsnew&itm_content=InternalCATwhatsnew"
 # url = "https://www.costco.co.kr/c/whatsnew?itm_source=homepage&itm_medium=blueNav&itm_campaign=whatsnew&itm_term=whatsnew&itm_content=InternalCATwhatsnew&page=1"
 # url = "https://www.costco.co.kr/c/whatsnew?itm_source=homepage&itm_medium=blueNav&itm_campaign=whatsnew&itm_term=whatsnew&itm_content=InternalCATwhatsnew&sort=price-asc"
-url = "https://www.costco.co.kr/HomeKitchen/Kitchen-Accessories/c/cos_15.2?page=1"
+# url = "https://www.costco.co.kr/HomeKitchen/Kitchen-Accessories/c/cos_15.2?page=1"
 # page = ""
 # full_url = f"{url}{page}"
 
