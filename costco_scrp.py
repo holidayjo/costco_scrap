@@ -5,18 +5,26 @@
 import pandas as pd
 from lxml import etree as et
 from bs4 import BeautifulSoup
-from selenium import webdriver
+import selenium
+import webdriver_manager
+
 pd.options.mode.chained_assignment = None
 from selenium.webdriver.common.by import By
 
-driver = webdriver.Firefox()
-print(driver)
+from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
+from webdriver_manager.chrome import ChromeDriverManager
+
+chrome_options = webdriver.ChromeOptions()
+driver         = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=chrome_options)
+
+driver.get('http://www.google.com')
 
 def extract_content(url):
     # Function to extract content from page.
     driver.get(url)
     page_content = driver.page_source
-    soup = BeautifulSoup(page_content, 'html.parser')a
+    soup = BeautifulSoup(page_content, 'html.parser')
     return soup
 
 def click_url(driver):
@@ -30,5 +38,5 @@ def category_link(soup):
     # Function to get the urls of sub categories under Audio/Video
     category_link = []
     for div in soup.find_all('div', attrs = {"class": "col=-xs-12 col-lg-6 con-cl-3"}):
-        
+        break
         
