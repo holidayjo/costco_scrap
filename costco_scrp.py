@@ -34,6 +34,7 @@ def extract_content(url):
 def click_url(driver, click_path):
     # Function to click e electronic category 'Audio/Video' and extract content from the page.
     driver.find_element(By.XPATH, click_path).click()
+    driver.find_element(By.XPATH, click_path).click()
     html_content = driver.page_source
     soup         = BeautifulSoup(html_content, 'html.parser')
     return soup
@@ -43,6 +44,23 @@ def category_link(soup):
     category_link = []
     for div in soup.find_all('div', attrs = {"class": "col=-xs-12 col-lg-6 con-cl-3"}):
         break
+        
+        
+    
+        
+# Reading urls and html links.
+root_url   = url_reader(menu_name='root')
+click_1 = url_reader(menu_name='whats_new')
+print(root_url)
+print(click_1)
+
+
+chrome_options = webdriver.ChromeOptions()
+driver         = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=chrome_options)
+
+driver.get(root_url)
+url_content = click_url(driver, click_1)
+
         
         
     
