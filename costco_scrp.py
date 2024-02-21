@@ -49,32 +49,16 @@ def category_link(soup):
     
         
 # Reading urls and html links.
-root_url   = url_reader(menu_name='root')
-click_1 = url_reader(menu_name='whats_new')
-print(root_url)
-print(click_1)
-
-
-chrome_options = webdriver.ChromeOptions()
-driver         = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=chrome_options)
-
-driver.get(root_url)
-url_content = click_url(driver, click_1)
-
-        
-        
-    
-        
-# Reading urls and html links.
-root_url   = url_reader(menu_name='root')
-click_1 = url_reader(menu_name='whats_new')
-print(root_url)
-print(click_1)
-
+root_url = url_reader(menu_name='root')
+click_1  = url_reader(menu_name='whats_new')
+print("root_url =", root_url)
+print("click_1  =", click_1)
 
 chrome_options = webdriver.ChromeOptions()
 driver         = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=chrome_options)
 
 driver.get(root_url)
 url_content = click_url(driver, click_1)
+
+
 
