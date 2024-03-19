@@ -1,6 +1,10 @@
 {
-    "root"     : "https://www.costco.co.kr/",
-    "whats_new": "/html/body/main/sip-header/header/div[2]/div[2]/nav/div/div[1]/div/div[2]/ul[7]/li/a",
-    "category" : {
-        "digital"  : "https://www.costco.co.kr/ElectronicsComputers/c/cos_1"}
+    "root"      : "https://www.costco.co.kr/",
+    "whats_new" : "/html/body/main/sip-header/header/div[2]/div[2]/nav/div/div[1]/div/div[2]/ul[7]/li/a",
+    "BuyersPick": {"page1" : "/html/body/main/sip-header/header/div[2]/div[2]/nav/div/div[1]/div/div[2]/ul[6]/li/a",
+                   "page2" : "/html/body/main/div[4]/sip-product-listing/div/div/div[2]/sip-page-slot/sip-product-list/div/section/div[4]/div[1]/sip-pagination/ul/li[3]/a",
+                   "page3" : "/html/body/main/div[4]/sip-product-listing/div/div/div[2]/sip-page-slot/sip-product-list/div/section/div[4]/div[1]/sip-pagination/ul/li[4]/a",
+                   "page4" : "/html/body/main/div[4]/sip-product-listing/div/div/div[2]/sip-page-slot/sip-product-list/div/section/div[4]/div[1]/sip-pagination/ul/li[5]/a",
+                   "page5" : "/html/body/main/div[4]/sip-product-listing/div/div/div[2]/sip-page-slot/sip-product-list/div/section/div[4]/div[1]/sip-pagination/ul/li[6]/a"},
+    "category"  : {"digital"  : "https://www.costco.co.kr/ElectronicsComputers/c/cos_1"}
 }
