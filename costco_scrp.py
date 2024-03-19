@@ -43,6 +43,7 @@ def category_link(soup):
     # Function to get the urls of sub categories under Audio/Video
     category_link = []
     for div in soup.find_all('div', attrs = {"class": "col=-xs-12 col-lg-6 con-cl-3"}):
+        print(div)
         break
         
         
@@ -58,7 +59,9 @@ chrome_options = webdriver.ChromeOptions()
 driver         = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=chrome_options)
 
 driver.get(root_url)
-url_content = click_url(driver, click_1)
-
+url_content = click_url(driver, click_1) # in the bs4 shape.
+print("url_content =", url_content)
+product_name = url_content.find_all('a', class_='lister-name')
+# print(product_name)
 
 
