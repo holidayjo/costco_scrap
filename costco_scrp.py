@@ -19,7 +19,7 @@ def url_reader(): # (menu_name='whats_new'):
         with open(r'D:\Github\Python\webscr\costco_scrap-2\urls.json') as f:
             data = json.load(f)
     else:
-        with open('/media/holidayj/My Documents/Github/Python/webscr/costco_scrap-2/urls.json') as f:
+        with open('urls.json') as f:
             data = json.load(f)
     f.close()
     return data #[menu_name]
@@ -56,6 +56,8 @@ def category_link(soup):
 urls            = url_reader()        # root is costco home page.
 click_category  = urls["BuyersPick"]["page1"]  # buyerspick - page1 category.
 root_url        = urls["root"]
+
+print("click_category =", click_category)
 
 chrome_options = webdriver.ChromeOptions()
 driver         = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=chrome_options)
